@@ -1,0 +1,50 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.category-list-container {
+  padding-block: rem(30) rem(40);
+
+  h2 {
+    @extend .heading-6;
+    color: var(--cr-title-dark);
+    margin-bottom: rem(20);
+  }
+
+  .category-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(10);
+    row-gap: rem(10);
+
+    .category {
+      position: relative;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        @extend .subtitle-3-semibold;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: white;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: rem(16);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(24);
+    letter-spacing: -1%;
+    color: var(--cr-deep-blue);
+    text-decoration-thickness: 1px;
+  }
+}

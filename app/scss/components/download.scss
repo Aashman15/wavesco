@@ -1,0 +1,67 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.download-container {
+  background-color: var(--cr-deep-blue);
+  padding-block: rem(50);
+
+  &__header {
+    text-align: center;
+
+    h2 {
+      @extend .heading-5;
+      max-width: 21ch;
+      margin-inline: auto;
+      margin-bottom: rem(8);
+      color: var(--cr-white);
+    }
+
+    p {
+      @extend .caption-2-medium;
+      color: var(--cr-title-light);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    padding-block: rem(40) rem(24);
+
+    .download-card {
+      border: 1px solid var(--cr-deep-blue-saturation);
+      border-radius: 12px;
+      padding-block: rem(24) rem(38);
+      padding-left: rem(30.17);
+
+      h2 {
+        @extend .heading-6;
+        color: var(--cr-white);
+      }
+
+      p {
+        @extend .subtitle-3-medium;
+        color: var(--cr-title-light);
+        margin-block: rem(16) rem(39);
+        max-width: 24ch;
+      }
+
+      h3 {
+        @extend .subtitle-2-semibold;
+        color: var(--cr-white);
+        margin-bottom: rem(14);
+      }
+    }
+
+    .download-card-premium {
+      background-color: var(--cr-premium-download-bg);
+      border: none;
+    }
+  }
+
+  .join-text {
+    @extend .caption-2-medium;
+    color: var(--cr-title-light);
+    text-align: center;
+  }
+}

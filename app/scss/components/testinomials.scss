@@ -1,0 +1,49 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.testinomials-container {
+  padding-block: rem(50) rem(70);
+  text-align: center;
+
+  &__header {
+    h3 {
+      @extend .capitalized-14;
+      color: var(--cr-brave-yellow);
+    }
+
+    h2 {
+      @extend .heading-6;
+      color: var(--cr-title-dark);
+      margin-top: rem(20);
+      max-width: 21ch;
+      margin-inline: auto;
+    }
+  }
+
+  &__cards {
+    margin-block: rem(40) rem(30);
+    .testinomials-card {
+      border: 1.5px solid var(--cr-title-light);
+      border-radius: 8px;
+      padding-block: rem(20) rem(30);
+      padding-inline: rem(11);
+
+      .comment {
+        @extend .caption-3-medium;
+        color: var(--cr-description-dark);
+        margin-block: rem(10) rem(15);
+      }
+
+      .person-name {
+        @extend .subtitle-2-semibold;
+        color: var(--cr-title-dark);
+        margin-block: rem(10) rem(1);
+      }
+
+      .position {
+        @extend .caption-3-medium;
+        color: var(--cr-description-light);
+      }
+    }
+  }
+}

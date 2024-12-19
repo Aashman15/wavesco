@@ -1,0 +1,45 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.whyus-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(47);
+
+  padding-block: rem(50);
+
+  .whyus {
+    text-align: center;
+    h3 {
+      @extend .capitalized-14;
+      color: var(--cr-brave-yellow);
+    }
+
+    p {
+      @extend .heading-6;
+      color: var(--cr-title-dark);
+      max-width: 22ch;
+      margin-inline: auto;
+      margin-top: rem(17);
+    }
+  }
+
+  .whyus-details {
+    display: grid;
+    row-gap: rem(30);
+    padding-inline: rem(49);
+
+    .whyus-detail {
+      h4 {
+        @extend .subtitle-3-semibold;
+        margin-block: rem(20) rem(4);
+        color: var(--cr-title-dark);
+      }
+      p {
+        @extend .caption-3-medium;
+        color: var(--cr-description-dark);
+        max-width: 27ch;
+      }
+    }
+  }
+}

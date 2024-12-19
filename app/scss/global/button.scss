@@ -1,0 +1,26 @@
+@use "../util" as *;
+@use "./typography" as *;
+
+.btn {
+  @extend .label-2;
+  padding: rem(10) rem(20);
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid var(--cr-white);
+  color: var(--cr-white);
+}
+
+.btn-white {
+  background-color: var(--cr-white);
+  color: var(--cr-deep-blue);
+}
+
+.btn-deep-blue {
+  background-color: var(--cr-deep-blue);
+  color: var(--cr-white);
+}

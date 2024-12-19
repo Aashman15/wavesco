@@ -1,0 +1,49 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.footer {
+  background-color: var(--cr-dark-blue);
+  padding-block: rem(50);
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(34);
+
+    .app-info {
+      p {
+        @extend .caption-3-regular;
+        margin-block: rem(25) 0;
+        color: var(--cr-description-light);
+        max-width: 33ch;
+      }
+    }
+
+    .app-links {
+      display: flex;
+      column-gap: rem(40);
+      row-gap: rem(34);
+      flex-wrap: wrap;
+
+      .app-link {
+        h2 {
+          @extend .subtitle-3-semibold;
+          color: var(--cr-title-light);
+          margin-bottom: rem(12);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          row-gap: rem(8);
+          list-style: none;
+
+          li {
+            @extend .caption-3-regular;
+            color: var(--cr-description-light);
+          }
+        }
+      }
+    }
+  }
+}

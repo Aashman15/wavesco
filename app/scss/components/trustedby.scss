@@ -1,0 +1,26 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.trustedby {
+  background-color: var(--cr-trustedby-bg);
+  .wrapper {
+    text-align: center;
+    padding-block: rem(30) rem(40);
+
+    h2 {
+      @extend .subtitle-2-semibold;
+      color: var(--cr-title-dark);
+      max-width: 27ch;
+      margin-inline: auto;
+      margin-bottom: rem(30);
+    }
+
+    .partner-logos {
+      display: flex;
+      column-gap: rem(34);
+      row-gap: rem(30);
+      flex-wrap: wrap;
+      padding-left: rem(10);
+    }
+  }
+}

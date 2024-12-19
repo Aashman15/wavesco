@@ -1,0 +1,69 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(50);
+  position: relative;
+  z-index: 0;
+  padding-block: rem(56) rem(120);
+  color: #eeeeee;
+
+  .hero-text {
+    text-align: center;
+    h2 {
+      @extend .heading-6;
+      color: var(--cr-title-light);
+    }
+
+    p {
+      @extend .subtitle-3-semibold;
+      color: var(--cr-description-light);
+      margin-top: rem(16);
+      max-width: 28ch;
+      margin-inline: auto;
+    }
+  }
+
+  .hero-search-section {
+    p {
+      @extend .caption-3-regular;
+      color: var(--cr-title-light);
+      margin-top: rem(14);
+      max-width: 32ch;
+    }
+
+    .hero-search-bar {
+      position: relative;
+
+      i {
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+
+        color: var(--cr-search-icon);
+      }
+      input {
+        height: rem(44);
+        width: 100%;
+        padding-left: rem(42);
+        border-radius: 8px;
+        border: none;
+      }
+
+      input::placeholder {
+        @extend .caption-2-medium;
+        color: var(--cr-description-dark);
+      }
+    }
+  }
+
+  .hero-summary {
+    @extend .caption-3-medium;
+    color: var(--cr-title-light);
+    max-width: 32ch;
+    margin-inline: auto;
+  }
+}

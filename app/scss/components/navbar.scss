@@ -1,0 +1,17 @@
+@use "../util/" as *;
+
+.navbar {
+  position: relative;
+  z-index: 1;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(26) rem(27);
+
+    .navbar-menu {
+      display: none;
+    }
+  }
+}
