@@ -35,21 +35,7 @@
   letter-spacing: -2%;
 }
 
-@mixin heading-5 {
-  font-weight: 600;
-  font-size: rem(24);
-  line-height: 160%;
-  letter-spacing: -2%;
-}
-
 .heading-6 {
-  font-weight: 600;
-  font-size: rem(20);
-  line-height: rem(30);
-  letter-spacing: -2%;
-}
-
-@mixin heading-6 {
   font-weight: 600;
   font-size: rem(20);
   line-height: rem(30);
@@ -208,6 +194,207 @@
 }
 
 .capitalized-14 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: rem(14);
+  letter-spacing: 0%;
+}
+
+@mixin heading-1 {
+  font-weight: 700;
+  font-size: rem(72);
+  line-height: rem(98);
+  letter-spacing: -1%;
+}
+
+@mixin heading-2 {
+  font-weight: 700;
+  font-size: rem(48);
+  line-height: rem(64);
+  letter-spacing: -1%;
+}
+
+@mixin heading-3 {
+  font-weight: 700;
+  font-size: rem(36);
+  line-height: 146.5%;
+  letter-spacing: -2%;
+}
+
+@mixin heading-4 {
+  font-weight: 600;
+  font-size: rem(28);
+  line-height: rem(45);
+  letter-spacing: -2%;
+}
+
+@mixin heading-5 {
+  font-weight: 600;
+  font-size: rem(24);
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+
+@mixin heading-6 {
+  font-weight: 600;
+  font-size: rem(20);
+  line-height: rem(30);
+  letter-spacing: -2%;
+}
+
+@mixin subtitle-1 {
+  font-size: rem(20);
+  font-family: "Inter";
+  line-height: 170%;
+  letter-spacing: -5%;
+}
+
+@mixin subtitle-1-semibold {
+  @include subtitle-1;
+  font-weight: 600;
+}
+
+@mixin subtitle-1-medium {
+  @include subtitle-1;
+  font-weight: 500;
+}
+
+@mixin subtitle-2 {
+  font-size: rem(18);
+  font-family: "Inter";
+  line-height: 172%;
+  letter-spacing: -5%;
+}
+
+@mixin subtitle-2-semibold {
+  @include subtitle-2;
+  font-weight: 600;
+}
+
+@mixin subtitle-2-medium {
+  @include subtitle-2;
+  font-weight: 500;
+}
+
+@mixin subtitle-3 {
+  font-size: rem(16);
+  font-family: "Inter";
+  line-height: 138%;
+  letter-spacing: 0%;
+}
+
+@mixin subtitle-3-semibold {
+  @include subtitle-3;
+  font-weight: 600;
+}
+
+@mixin subtitle-3-medium {
+  @include subtitle-3;
+  font-weight: 500;
+}
+
+@mixin subtitle-4 {
+  font-size: rem(14);
+  font-family: "Inter";
+  line-height: 138%;
+  letter-spacing: -5%;
+}
+
+@mixin subtitle-4-semibold {
+  @include subtitle-4;
+  font-weight: 600;
+}
+
+@mixin subtitle-4-medium {
+  @include subtitle-4;
+  font-weight: 500;
+}
+
+@mixin caption-1 {
+  font-family: "Inter";
+  font-size: rem(18);
+  line-height: 189%;
+  letter-spacing: -5%;
+}
+
+@mixin caption-1-medium {
+  @include caption-1;
+  font-weight: 500;
+}
+
+@mixin caption-1-regular {
+  @include caption-1;
+  font-weight: 400;
+}
+
+@mixin caption-2 {
+  font-family: "Inter";
+  font-size: rem(16);
+  line-height: 180%;
+  letter-spacing: 0%;
+}
+
+@mixin caption-2-medium {
+  @include caption-2;
+  font-weight: 500;
+}
+
+@mixin caption-2-regular {
+  @include caption-2;
+  font-weight: 400;
+}
+
+@mixin caption-3 {
+  font-family: "Inter";
+  font-size: rem(14);
+  line-height: 172%;
+  letter-spacing: 0%;
+}
+
+@mixin caption-3-medium {
+  @include caption-3;
+  font-weight: 500;
+}
+
+@mixin caption-3-regular {
+  @include caption-3;
+  font-weight: 400;
+}
+
+@mixin label-1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: rem(16);
+  line-height: rem(24);
+  letter-spacing: -1%;
+}
+
+@mixin label-2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: rem(24);
+  letter-spacing: -1%;
+}
+
+@mixin label-3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: rem(12);
+  line-height: rem(16);
+  letter-spacing: -1%;
+}
+
+@mixin capitalized-18 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: rem(16);
+  letter-spacing: 0%;
+}
+
+@mixin capitalized-14 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: rem(14);

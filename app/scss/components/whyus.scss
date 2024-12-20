@@ -5,11 +5,26 @@
   display: flex;
   flex-direction: column;
   row-gap: rem(47);
-
   padding-block: rem(50);
+
+  @include breakpoint(medium) {
+    padding-block: rem(40) rem(60);
+    row-gap: rem(41);
+  }
+
+  @include breakpoint(large) {
+    padding-block: rem(60) rem(100);
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .whyus {
     text-align: center;
+
+    @include breakpoint(large) {
+      text-align: left;
+    }
+
     h3 {
       @extend .capitalized-14;
       color: var(--cr-brave-yellow);
@@ -21,13 +36,34 @@
       max-width: 22ch;
       margin-inline: auto;
       margin-top: rem(17);
+
+      @include breakpoint(medium) {
+        @include heading-5;
+        max-width: 30ch;
+      }
+
+      @include breakpoint(large) {
+        @include heading-4;
+        max-width: 22ch;
+      }
     }
   }
 
   .whyus-details {
     display: grid;
     row-gap: rem(30);
-    padding-inline: rem(49);
+    width: fit-content;
+    margin-inline: auto;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(53);
+      column-gap: rem(110);
+    }
+
+    @include breakpoint(large) {
+      margin-inline: 0;
+    }
 
     .whyus-detail {
       h4 {
