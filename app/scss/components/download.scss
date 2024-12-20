@@ -5,6 +5,14 @@
   background-color: var(--cr-deep-blue);
   padding-block: rem(50);
 
+  @include breakpoint(medium) {
+    padding-block: rem(60);
+  }
+
+  @include breakpoint(large) {
+    padding-block: rem(65) rem(69);
+  }
+
   &__header {
     text-align: center;
 
@@ -14,6 +22,17 @@
       margin-inline: auto;
       margin-bottom: rem(8);
       color: var(--cr-white);
+
+      @include breakpoint(medium) {
+        @include heading-4;
+        max-width: 31ch;
+        margin-bottom: rem(12);
+      }
+
+      @include breakpoint(large) {
+        @include heading-3;
+        margin-bottom: rem(14);
+      }
     }
 
     p {
@@ -27,6 +46,18 @@
     flex-direction: column;
     row-gap: rem(20);
     padding-block: rem(40) rem(24);
+    width: fit-content;
+    margin-inline: auto;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      column-gap: rem(40);
+      padding-block: rem(40) rem(30);
+    }
+
+    @include breakpoint(large) {
+      padding-block: rem(43) rem(39);
+    }
 
     .download-card {
       border: 1px solid var(--cr-deep-blue-saturation);
@@ -34,22 +65,43 @@
       padding-block: rem(24) rem(38);
       padding-left: rem(30.17);
 
+      @include breakpoint(medium) {
+        padding-block: rem(34) rem(42);
+      }
+
       h2 {
         @extend .heading-6;
         color: var(--cr-white);
+
+        @include breakpoint(medium) {
+          @include heading-5;
+        }
+
+        @include breakpoint(large) {
+          @include heading-4;
+        }
       }
 
       p {
         @extend .subtitle-3-medium;
         color: var(--cr-title-light);
         margin-block: rem(16) rem(39);
+        height: rem(67);
         max-width: 24ch;
+
+        @include breakpoint(large) {
+          @include subtitle-2-medium;
+        }
       }
 
       h3 {
         @extend .subtitle-2-semibold;
         color: var(--cr-white);
         margin-bottom: rem(14);
+
+        @include breakpoint(large) {
+          @include subtitle-1-semibold;
+        }
       }
     }
 
@@ -63,5 +115,9 @@
     @extend .caption-2-medium;
     color: var(--cr-title-light);
     text-align: center;
+
+    @include breakpoint(medium) {
+      @include caption-1-medium;
+    }
   }
 }

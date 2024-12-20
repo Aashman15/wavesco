@@ -7,6 +7,10 @@
   cursor: pointer;
   border-radius: 8px;
   border: none;
+
+  @include breakpoint(medium) {
+    padding: rem(14) rem(24);
+  }
 }
 
 .btn-transparent {
