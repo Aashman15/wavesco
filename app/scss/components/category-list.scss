@@ -4,17 +4,45 @@
 .category-list-container {
   padding-block: rem(30) rem(40);
 
+  @include breakpoint(medium) {
+    padding-block: rem(40);
+  }
+
+  @include breakpoint(large) {
+    padding-block: rem(60);
+  }
+
   h2 {
     @extend .heading-6;
     color: var(--cr-title-dark);
     margin-bottom: rem(20);
+
+    @include breakpoint(medium) {
+      @include heading-5;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: rem(23);
+    }
   }
 
   .category-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: rem(10);
     row-gap: rem(10);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(16);
+      row-gap: rem(12);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: rem(20);
+      row-gap: rem(16);
+    }
 
     .category {
       position: relative;
@@ -46,5 +74,9 @@
     letter-spacing: -1%;
     color: var(--cr-deep-blue);
     text-decoration-thickness: 1px;
+
+    @include breakpoint(large) {
+      margin-top: rem(20);
+    }
   }
 }

@@ -35,7 +35,21 @@
   letter-spacing: -2%;
 }
 
+@mixin heading-5 {
+  font-weight: 600;
+  font-size: rem(24);
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+
 .heading-6 {
+  font-weight: 600;
+  font-size: rem(20);
+  line-height: rem(30);
+  letter-spacing: -2%;
+}
+
+@mixin heading-6 {
   font-weight: 600;
   font-size: rem(20);
   line-height: rem(30);

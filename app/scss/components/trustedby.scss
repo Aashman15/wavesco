@@ -7,20 +7,109 @@
     text-align: center;
     padding-block: rem(30) rem(40);
 
+    @include breakpoint(medium) {
+      padding-block: rem(40);
+    }
+
+    @include breakpoint(large) {
+      padding-block: rem(50) rem(60);
+    }
+
     h2 {
       @extend .subtitle-2-semibold;
       color: var(--cr-title-dark);
       max-width: 27ch;
       margin-inline: auto;
       margin-bottom: rem(30);
+
+      @include breakpoint(medium) {
+        @include heading-6;
+        max-width: 35ch;
+        margin-bottom: rem(35);
+      }
     }
 
     .partner-logos {
       display: flex;
+      justify-content: center;
+      align-items: center;
       column-gap: rem(34);
       row-gap: rem(30);
       flex-wrap: wrap;
-      padding-left: rem(10);
+
+      @include breakpoint(medium) {
+        justify-content: space-between;
+      }
+
+      .logo-1 {
+        width: rem(40);
+        height: rem(40);
+
+        @include breakpoint(large) {
+          width: rem(50);
+          height: rem(50);
+        }
+      }
+
+      .logo-2 {
+        width: rem(40);
+        height: rem(40);
+
+        @include breakpoint(large) {
+          width: rem(50);
+          height: rem(50);
+        }
+      }
+
+      .logo-3 {
+        width: rem(62.74);
+        height: rem(44);
+
+        @include breakpoint(large) {
+          width: rem(77);
+          height: rem(54);
+        }
+      }
+
+      .logo-4 {
+        width: rem(40);
+        height: rem(49.6);
+
+        @include breakpoint(large) {
+          width: rem(50);
+          height: rem(62);
+        }
+      }
+
+      .logo-5 {
+        width: rem(80);
+        height: rem(21.8);
+
+        @include breakpoint(large) {
+          width: rem(94);
+          height: rem(25);
+        }
+      }
+
+      .logo-6 {
+        width: rem(90);
+        height: rem(17.25);
+
+        @include breakpoint(large) {
+          width: rem(130);
+          height: rem(24.92);
+        }
+      }
+
+      .logo-7 {
+        width: rem(40);
+        height: rem(40);
+
+        @include breakpoint(large) {
+          width: rem(50);
+          height: rem(50);
+        }
+      }
     }
   }
 }
