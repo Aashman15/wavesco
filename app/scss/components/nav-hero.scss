@@ -1,11 +1,16 @@
-.navbar-hero-bg-container {
-  position: relative;
+@use "../util" as *;
 
-  .navbar-hero-bg {
+.nav-hero {
+  position: relative;
+  overflow: hidden;
+  height: rem(620);
+
+  .nav-hero-bg {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    height: rem(620);
   }
 }
