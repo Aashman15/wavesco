@@ -1,9 +1,32 @@
 @use "../util" as *;
 @use "../global" as *;
 
+.show-from-medium {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.show-from-large {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
 .testinomials-container {
   padding-block: rem(50) rem(70);
   text-align: center;
+
+  @include breakpoint(medium) {
+    padding-block: rem(60) rem(90);
+  }
+
+  @include breakpoint(large) {
+    padding-block: rem(60) rem(140);
+  }
 
   &__header {
     h3 {
@@ -17,21 +40,41 @@
       margin-top: rem(20);
       max-width: 21ch;
       margin-inline: auto;
+
+      @include breakpoint(medium) {
+        @include heading-5;
+        max-width: 34ch;
+      }
     }
   }
 
   &__cards {
     margin-block: rem(40) rem(30);
+    max-width: fit-content;
+    margin-inline: auto;
+
+    @include breakpoint(medium) {
+      display: flex;
+      column-gap: rem(30);
+
+      margin-block: rem(50) rem(30);
+    }
+
     .testinomials-card {
       border: 1.5px solid var(--cr-title-light);
       border-radius: 8px;
       padding-block: rem(20) rem(30);
       padding-inline: rem(11);
 
+      @include breakpoint(medium) {
+        padding-inline: rem(20);
+      }
+
       .comment {
         @extend .caption-3-medium;
         color: var(--cr-description-dark);
         margin-block: rem(10) rem(15);
+        max-width: 29ch;
       }
 
       .person-name {
