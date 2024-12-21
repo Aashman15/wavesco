@@ -9,6 +9,10 @@
     padding-block: rem(40);
   }
 
+  @include breakpoint(large) {
+    padding-block: rem(50);
+  }
+
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
