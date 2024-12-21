@@ -1,9 +1,18 @@
 @use "../util" as *;
+@use "../global" as *;
 
 .nav-hero {
   position: relative;
   overflow: hidden;
   height: rem(620);
+
+  @include breakpoint(medium) {
+    height: rem(667);
+  }
+
+  @include breakpoint(large) {
+    height: rem(650);
+  }
 
   .nav-hero-bg {
     position: absolute;
@@ -11,6 +20,22 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    width: rem(1244);
     height: rem(620);
+
+    @include breakpoint(medium) {
+      height: rem(667);
+    }
+
+    @include breakpoint(large) {
+      height: rem(650);
+    }
+
+    @media (min-width: 1244px) {
+      width: 100%;
+      height: auto;
+      left: 0;
+      transform: none;
+    }
   }
 }
