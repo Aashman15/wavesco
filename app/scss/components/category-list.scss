@@ -46,6 +46,7 @@
 
     .category {
       position: relative;
+      cursor: pointer;
 
       img {
         border-radius: 8px;
@@ -62,21 +63,6 @@
         color: white;
         white-space: nowrap;
       }
-    }
-  }
-
-  a {
-    display: inline-block;
-    margin-top: rem(16);
-    font-weight: 600;
-    font-size: rem(14);
-    line-height: rem(24);
-    letter-spacing: -1%;
-    color: var(--cr-deep-blue);
-    text-decoration-thickness: 1px;
-
-    @include breakpoint(large) {
-      margin-top: rem(20);
     }
   }
 }
