@@ -1,0 +1,64 @@
+@use "../util" as *;
+@use "../global" as *;
+
+.sound-effects-container {
+  padding-block: rem(50);
+
+  @include breakpoint(large) {
+    padding-block: rem(80) rem(60);
+  }
+
+  h2 {
+    @extend .heading-6;
+
+    @include breakpoint(medium) {
+      @include heading-5;
+    }
+
+    @include breakpoint(large) {
+      @include heading-4;
+    }
+  }
+
+  .sound-effects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: rem(14);
+
+    @include breakpoint(medium) {
+      margin-block: rem(15);
+    }
+
+    @include breakpoint(large) {
+      margin-block: rem(14) rem(20);
+    }
+
+    .links {
+      display: flex;
+      column-gap: rem(12);
+      padding: rem(10);
+
+      a {
+        @extend .subtitle-4-medium;
+        color: var(--cr-description-dark);
+        text-decoration: none;
+      }
+
+      .active {
+        text-underline-offset: rem(2);
+        text-decoration-thickness: rem(2);
+
+        text-decoration: underline;
+        color: var(--cr-dark-blue);
+      }
+    }
+
+    button {
+      display: flex;
+      column-gap: rem(8.5);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

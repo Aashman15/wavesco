@@ -32,6 +32,14 @@ body {
   }
 }
 
+.show-from-medium-inline {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: inline;
+  }
+}
+
 .show-from-large {
   display: none;
   @include breakpoint(large) {
