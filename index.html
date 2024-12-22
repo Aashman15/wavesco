@@ -43,7 +43,7 @@
 
           <!-- Hamburger Menu (Mobile) -->
           <img
-            class="hamburger"
+            class="hamburger hide-from-large"
             src="/images/hamburger.svg"
             width="24"
             height="16"
@@ -51,26 +51,26 @@
           />
 
           <!-- Navbar Links -->
-          <ul class="navbar-menu">
-            <li class="navbar-item">
-              <a href="/" class="navbar-link">Home</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/" class="navbar-link">Best for Youtube</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/" class="navbar-link">Category</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/" class="navbar-link">Upgrade</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/" class="navbar-link">FAQ</a>
-            </li>
-            <li class="navbar-item">
-              <button class="btn btn-deep-blue">Login</button>
-            </li>
-          </ul>
+          <div class="navbar-menu-and-login">
+            <ul class="navbar-menu">
+              <li class="navbar-item">
+                <a href="/" class="navbar-link navbar-link-active">Home</a>
+              </li>
+              <li class="navbar-item">
+                <a href="/" class="navbar-link">Best for Youtube</a>
+              </li>
+              <li class="navbar-item">
+                <a href="/" class="navbar-link">Category</a>
+              </li>
+              <li class="navbar-item">
+                <a href="/" class="navbar-link">Upgrade</a>
+              </li>
+              <li class="navbar-item">
+                <a href="/" class="navbar-link">FAQ</a>
+              </li>
+            </ul>
+            <button class="btn btn-deep-blue">Login</button>
+          </div>
         </div>
       </nav>
       <section class="hero wrapper">
@@ -89,7 +89,8 @@
           <p>Try keyword: happy, funny, natural, horror, jumpscare and more</p>
         </div>
         <p class="hero-summary">
-          650.654 Available Sounds. Library Updated Weekly. See popular sounds
+          650.654 Available Sounds. Library Updated Weekly.
+          <u>See popular sounds</u>
         </p>
       </section>
     </div>

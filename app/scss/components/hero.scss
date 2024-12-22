@@ -7,14 +7,33 @@
   row-gap: rem(50);
   position: relative;
   z-index: 0;
-  padding-block: rem(56) rem(120);
+  padding-block: rem(56) 0;
   color: #eeeeee;
+
+  @include breakpoint(large) {
+    padding-block: rem(100) 0;
+    row-gap: rem(51);
+  }
+
+  @include breakpoint(medium) {
+    padding-block: rem(95) 0;
+  }
 
   .hero-text {
     text-align: center;
     h2 {
       @extend .heading-6;
       color: var(--cr-title-light);
+      max-width: 23ch;
+      margin-inline: auto;
+
+      @include breakpoint(medium) {
+        @include heading-3;
+      }
+
+      @include breakpoint(large) {
+        max-width: 37ch;
+      }
     }
 
     p {
@@ -23,15 +42,34 @@
       margin-top: rem(16);
       max-width: 28ch;
       margin-inline: auto;
+
+      @include breakpoint(medium) {
+        @include subtitle-2-medium;
+        max-width: 57ch;
+      }
+
+      @include breakpoint(large) {
+        @include subtitle-1-medium;
+      }
     }
   }
 
   .hero-search-section {
+    @include breakpoint(medium) {
+      max-width: fit-content;
+      margin-inline: auto;
+    }
+
     p {
       @extend .caption-3-regular;
       color: var(--cr-title-light);
       margin-top: rem(14);
       max-width: 32ch;
+
+      @include breakpoint(medium) {
+        max-width: 48ch;
+        margin-top: rem(10);
+      }
     }
 
     .hero-search-bar {
@@ -45,12 +83,19 @@
 
         color: var(--cr-search-icon);
       }
+
       input {
         height: rem(44);
         width: 100%;
         padding-left: rem(42);
         border-radius: 8px;
         border: none;
+        max-width: rem(600);
+
+        @include breakpoint(medium) {
+          height: rem(60);
+          width: rem(600);
+        }
       }
 
       input::placeholder {
@@ -65,5 +110,10 @@
     color: var(--cr-title-light);
     max-width: 32ch;
     margin-inline: auto;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      max-width: 100%;
+    }
   }
 }

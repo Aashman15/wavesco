@@ -1,3 +1,5 @@
+@use "../util/" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -20,4 +22,25 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
   max-width: 100%;
+}
+
+.show-from-medium {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.show-from-large {
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
+.hide-from-large {
+  @include breakpoint(large) {
+    display: none;
+  }
 }

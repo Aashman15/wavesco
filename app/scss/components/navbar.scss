@@ -10,8 +10,44 @@
     align-items: center;
     padding-block: rem(26) rem(27);
 
-    .navbar-menu {
+    .hamburger {
+      width: rem(24);
+      height: rem(16);
+
+      @include breakpoint(medium) {
+        width: rem(30);
+        height: rem(20);
+      }
+    }
+
+    .navbar-menu-and-login {
       display: none;
+
+      @include breakpoint(large) {
+        display: flex;
+        column-gap: rem(43);
+        align-items: center;
+
+        .navbar-menu {
+          display: flex;
+          column-gap: rem(36);
+          padding-inline: rem(10);
+          list-style: none;
+
+          .navbar-link {
+            text-decoration: none;
+            color: var(--cr-description-light);
+            font-size: rem(14);
+            font-weight: 500;
+            line-height: rem(24);
+            letter-spacing: -1%;
+          }
+
+          .navbar-link-active {
+            color: var(--cr-white);
+          }
+        }
+      }
     }
   }
 }

@@ -1,21 +1,6 @@
 @use "../util" as *;
 @use "../global" as *;
 
-.show-from-medium {
-  display: none;
-
-  @include breakpoint(medium) {
-    display: block;
-  }
-}
-
-.show-from-large {
-  display: none;
-  @include breakpoint(large) {
-    display: block;
-  }
-}
-
 .testinomials-container {
   padding-block: rem(50) rem(70);
   text-align: center;
